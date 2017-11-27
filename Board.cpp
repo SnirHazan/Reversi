@@ -20,6 +20,7 @@ Board::Board() : size(DEFAULT) {
 	this->board = new char*[size];
 	this->inatializeBoard();
 	this->capacity = 4;
+	cout<<this->size<<endl;
 
 }
 
