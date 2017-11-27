@@ -141,6 +141,7 @@ char Board::getCell(int i, int j) {
 }
 
 int Board:: getScore(char type){
+	cout<<"this is what i am talking about!!"<<endl;
     int counter = 0;
     for(int i = 0; i < this->size ; i++) {
         for(int j = 0 ; j < this->size ; j++){
