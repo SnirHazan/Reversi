@@ -7,8 +7,6 @@
  */
 
 #include "Board.h"
-#include <string>
-#include <iostream>
 #define DEFAULT 8
 using namespace std;
 
@@ -101,11 +99,7 @@ void Board::setInBoard(int row, int col, char player) {
  * @return true - if the board is full, false if not.
  */
 bool Board::isFull() {
-	if(this->capacity >= size*size) {
-		return true;
-	} else {
-		return false;
-	}
+	return this->capacity >= size * size ? true : false;
 }
 
 /**
@@ -141,7 +135,7 @@ char Board::getCell(int i, int j) {
 }
 
 int Board:: getScore(char type){
-
+    cout<<this->size<<endl;
     int counter = 0;
     for(int i = 0; i < this->size ; i++) {
         for(int j = 0 ; j < this->size ; j++){
