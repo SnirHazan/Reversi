@@ -74,14 +74,14 @@ void Board::printBoard() const {
 		cout << " "<< i + 1 << " |";
 	}
 	cout << endl;
-	cout << string(2 + 4 * size, '-') << endl;
+	cout << string((2 + 4 * size), '-') << endl;
 	for(int i = 0 ; i < size ; i++) {
 		cout << i + 1 << "|";
-		for(int j = 0 ; j < size ; j++){
+		for(int j = 0 ; size > j; j++){
 			cout <<" " << this->board[i][j] << " |";
 		}
 		cout << endl;
-		cout << string(2 + 4 * size, '-') << endl;
+		cout << string((2 + 4 * size), '-') << endl;
 	}
 
 }
@@ -100,7 +100,14 @@ void Board::setInBoard(int row, int col, char player) {
  * @return true - if the board is full, false if not.
  */
 bool Board::isFull() {
-	return this->capacity >= size * size ? true : false;
+
+	bool full;
+	if(this->capacity >= size * size == true) {
+		full = true;
+	} else {
+		full = false;
+	}
+	return full;
 }
 
 /**
