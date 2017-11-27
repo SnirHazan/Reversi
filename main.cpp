@@ -9,9 +9,6 @@
 #include <string>
 #include <iostream>
 #include "Game.h"
-#include "HumanPlayer.h"
-#include "Point.h"
-#include "RegularLogic.h"
 #include "InPutTest.h"
 
 using namespace std;
